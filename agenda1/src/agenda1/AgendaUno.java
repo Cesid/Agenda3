@@ -74,9 +74,130 @@ public class AgendaUno extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        dlgAdd = new javax.swing.JDialog();
+        jLabel1 = new javax.swing.JLabel();
+        txfNombre = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txfDireccion = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        txfTelefono = new javax.swing.JTextField();
+        btnAddEntrada = new javax.swing.JButton();
+        btnCancelar = new javax.swing.JButton();
+        btnAdd = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         lista = new javax.swing.JList();
         btnVer = new javax.swing.JButton();
+        btnAdd1 = new javax.swing.JButton();
+
+        dlgAdd.setTitle("Añadir entrada");
+        dlgAdd.setMinimumSize(new java.awt.Dimension(376, 258));
+        dlgAdd.setModal(true);
+        dlgAdd.setResizable(false);
+
+        jLabel1.setText("Nombre");
+
+        txfNombre.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txfNombreseleccionarNombre(evt);
+            }
+        });
+
+        jLabel2.setText("Dirección");
+
+        txfDireccion.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txfDireccionselecionarDireccion(evt);
+            }
+        });
+
+        jLabel3.setText("Teléfono");
+
+        txfTelefono.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txfTelefonoseleccionarTelefono(evt);
+            }
+        });
+
+        btnAddEntrada.setText("Añadir");
+        btnAddEntrada.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddEntradaaddEntrada(evt);
+            }
+        });
+
+        btnCancelar.setText("Cancelar");
+        btnCancelar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelarcancelarAdd(evt);
+            }
+        });
+
+        btnAdd.setText("Añadir");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddverAddEntrada(evt);
+            }
+        });
+
+        javax.swing.GroupLayout dlgAddLayout = new javax.swing.GroupLayout(dlgAdd.getContentPane());
+        dlgAdd.getContentPane().setLayout(dlgAddLayout);
+        dlgAddLayout.setHorizontalGroup(
+            dlgAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dlgAddLayout.createSequentialGroup()
+                .addGroup(dlgAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(dlgAddLayout.createSequentialGroup()
+                        .addGap(89, 89, 89)
+                        .addComponent(btnAddEntrada, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(56, 56, 56)
+                        .addComponent(btnCancelar))
+                    .addGroup(dlgAddLayout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addGroup(dlgAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addGroup(dlgAddLayout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txfDireccion))
+                            .addGroup(dlgAddLayout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 227, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, dlgAddLayout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 68, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(txfTelefono)))))
+                .addContainerGap(45, Short.MAX_VALUE))
+            .addGroup(dlgAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(dlgAddLayout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(btnAdd, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        dlgAddLayout.setVerticalGroup(
+            dlgAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(dlgAddLayout.createSequentialGroup()
+                .addGap(27, 27, 27)
+                .addGroup(dlgAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txfNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(dlgAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txfDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(dlgAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(txfTelefono, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(dlgAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnCancelar)
+                    .addComponent(btnAddEntrada))
+                .addContainerGap(57, Short.MAX_VALUE))
+            .addGroup(dlgAddLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(dlgAddLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(btnAdd)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Agenda");
@@ -92,6 +213,13 @@ public class AgendaUno extends javax.swing.JFrame {
             }
         });
 
+        btnAdd1.setText("Añadir");
+        btnAdd1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdd1verAddEntrada(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -100,7 +228,9 @@ public class AgendaUno extends javax.swing.JFrame {
                 .addGap(49, 49, 49)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
-                .addComponent(btnVer, javax.swing.GroupLayout.PREFERRED_SIZE, 73, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(btnVer, javax.swing.GroupLayout.DEFAULT_SIZE, 73, Short.MAX_VALUE)
+                    .addComponent(btnAdd1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(62, 62, 62))
         );
         layout.setVerticalGroup(
@@ -112,7 +242,9 @@ public class AgendaUno extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(41, 41, 41)
-                        .addComponent(btnVer)))
+                        .addComponent(btnVer)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnAdd1)))
                 .addContainerGap(45, Short.MAX_VALUE))
         );
 
@@ -128,7 +260,80 @@ public class AgendaUno extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, cadenaVer, "Ver contacto", JOptionPane.INFORMATION_MESSAGE);
         }
     }//GEN-LAST:event_verItemLista
-   
+
+    private void txfNombreseleccionarNombre(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txfNombreseleccionarNombre
+        //txfNombre.setText("");
+        txfNombre.selectAll();
+    }//GEN-LAST:event_txfNombreseleccionarNombre
+
+    private void txfDireccionselecionarDireccion(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txfDireccionselecionarDireccion
+        //txfDireccion.setText("");
+        txfDireccion.selectAll();
+    }//GEN-LAST:event_txfDireccionselecionarDireccion
+
+    private void txfTelefonoseleccionarTelefono(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txfTelefonoseleccionarTelefono
+        //txfTelefono.setText("");
+        txfTelefono.selectAll();
+    }//GEN-LAST:event_txfTelefonoseleccionarTelefono
+
+    private void btnAddEntradaaddEntrada(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddEntradaaddEntrada
+        String nombre = txfNombre.getText();
+        String direccion = txfDireccion.getText();
+        String telefono = txfTelefono.getText();
+        boolean error = false;
+        if (nombre.trim().equals("")) {
+            JOptionPane.showMessageDialog(null, "El campo nombre no puede estar vacío", "Error nombre", JOptionPane.ERROR_MESSAGE);
+            error = true;
+            txfNombre.requestFocus();
+        }
+        else if (direccion.trim().equals("")) {
+            JOptionPane.showMessageDialog(null, "El campo dirección no puede estar vacío", "Error dirección", JOptionPane.ERROR_MESSAGE);
+            error= true;
+            txfDireccion.requestFocus();
+        }
+        else if (telefono.trim().equals("")) {
+            JOptionPane.showMessageDialog(null, "El campo teléfono no puede estar vacío", "Error teléfono", JOptionPane.ERROR_MESSAGE);
+            error= true;
+            txfTelefono.requestFocus();
+        }
+        else {
+            try {
+                int iTelefono = Integer.parseInt(telefono);
+            } catch (NumberFormatException nfe) {
+                JOptionPane.showMessageDialog(null, "El campo teléfono tiene que ser numérico", "Error teléfono", JOptionPane.ERROR_MESSAGE);
+                txfTelefono.requestFocus();
+            }
+        }
+        if (error == false) {
+            Entrada e = new Entrada(txfNombre.getText(), txfDireccion.getText(), Integer.parseInt(txfTelefono.getText()));
+            int indice = modeloLista.indexOf(e);
+            if (indice == -1) {
+                modeloLista.addElement(e);
+                limpiarAdd();
+            }
+        }
+    }//GEN-LAST:event_btnAddEntradaaddEntrada
+
+    private void btnCancelarcancelarAdd(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarcancelarAdd
+        dlgAdd.setVisible(false);
+        limpiarAdd();
+    }//GEN-LAST:event_btnCancelarcancelarAdd
+
+    private void btnAddverAddEntrada(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddverAddEntrada
+        dlgAdd.setLocationRelativeTo(null);
+        dlgAdd.setVisible(true);
+    }//GEN-LAST:event_btnAddverAddEntrada
+
+    private void btnAdd1verAddEntrada(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdd1verAddEntrada
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnAdd1verAddEntrada
+   private void limpiarAdd() {
+        txfNombre.setText("");
+        txfDireccion.setText("");
+        txfTelefono.setText("");
+        //Con esto ponemos el foco en el texfield de Nombre
+        txfNombre.requestFocus();
+    }
     /**
      * @param args the command line arguments
      */
@@ -165,9 +370,20 @@ public class AgendaUno extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnAdd1;
+    private javax.swing.JButton btnAddEntrada;
+    private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnVer;
+    private javax.swing.JDialog dlgAdd;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JList lista;
+    private javax.swing.JTextField txfDireccion;
+    private javax.swing.JTextField txfNombre;
+    private javax.swing.JTextField txfTelefono;
     // End of variables declaration//GEN-END:variables
     private DefaultListModel modeloLista;
     
