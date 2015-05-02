@@ -386,5 +386,5 @@ public class AgendaUno extends javax.swing.JFrame {
     private javax.swing.JTextField txfTelefono;
     // End of variables declaration//GEN-END:variables
     private DefaultListModel modeloLista;
-    
+    private int n;
 }
